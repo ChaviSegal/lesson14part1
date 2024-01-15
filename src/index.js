@@ -4,14 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { watchReducer } from './Store/reducers/song';
-import {createStore} from 'redux'
+import { store } from './app/store';
 
-const myStore=createStore(watchReducer);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Provider store={myStore}>
+  <Provider store={store}>
     <App />
     </Provider>
   </React.StrictMode>
